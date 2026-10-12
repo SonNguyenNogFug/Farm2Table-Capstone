@@ -131,11 +131,11 @@ The team will confirm PR approval requirements and review turnaround expectation
 ## Support & Contact
 
 - Use Discord for team communication, questions, and blockers.
-- Project Manager: Evan Seip — sprint planning, task tracking, and partner communication.
-- AI Coordinator: Son Thai Do Nguyen — AI tools, `AGENTS.md`, and confidentiality.
-- Quality Owner: Branden Rodriguez — testing, CI, code reviews, and Definition of Done.
-- Facilitation Owner: Annika Etchison — meeting coordination and team discussions.
-- Deployment Owner: Aron Meraz — deployment and environments.
-- Documentation Owner: Thao Nguyen — project documentation and decision records.
+- Project Manager: Evan Seip - sprint planning, task tracking, and partner communication.
+- AI Coordinator: Son Thai Do Nguyen - AI tools, `AGENTS.md`, and confidentiality.
+- Quality Owner: Branden Rodriguez - testing, CI, code reviews, and Definition of Done.
+- Facilitation Owner: Annika Etchison - meeting coordination and team discussions.
+- Deployment Owner: Aron Meraz - deployment and environments.
+- Documentation Owner: Thao Nguyen - project documentation and decision records.
 
 If a problem cannot be resolved within the team, contact the course TA or instruction team when appropriate.
