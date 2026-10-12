@@ -12,6 +12,14 @@ Main features:
 - CSV export of selected data
 - Works on desktop, tablet, and mobile
 
+## Stack 
+- Language: JavaScript on Node.js
+- Frontend: HTML, CSS, JavaScript
+- Mapping: Leaflet or MapLibre
+- Plotting: Plotly
+- Backend / API: Node.js
+- Database: MongoDB
+
 ## Setup commands
 - Install deps: `pnpm install`
 - Start dev server: `pnpm dev`
