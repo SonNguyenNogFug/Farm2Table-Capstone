@@ -12,18 +12,20 @@ Main features:
 - CSV export of selected data
 - Works on desktop, tablet, and mobile
 
-## Stack 
-- Language: JavaScript on Node.js
-- Frontend: HTML, CSS, JavaScript
-- Mapping: Leaflet or MapLibre
-- Plotting: Plotly
-- Backend / API: Node.js
-- Database: MongoDB
+## Stack
+The team has not finalized the technology stack yet.
+
+- Language: TBD
+- Frontend: TBD
+- Mapping: TBD
+- Plotting: TBD
+- Backend / API: TBD
+- Database: TBD
+- Hosting: TBD
 
 ## Setup commands
-- Install deps: `pnpm install`
-- Start dev server: `pnpm dev`
-- Run tests: `pnpm test`
+Development commands have not been established yet.
+This section will be updated once the project setup is complete.
 
 ## Code style
 - TypeScript strict mode
