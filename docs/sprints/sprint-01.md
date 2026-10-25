@@ -9,7 +9,7 @@
 
 ## 1. Working Software Evidence
 
--Deployed URL / release tag / demo video: No working application is available yet. This sprint focused on gathering requirements, researching visualization approaches, and understanding the existing Ear to Earth platform and available sensor data. The team also identified Roundhouse as the initial location for development. A functional prototype has not yet been implemented.
+-Deployed URL / release tag / demo video: No working application is available yet. This sprint focused on gathering requirements, researching visualization approaches, and understanding the existing Ear2Earth platform and available sensor data. The team also identified Roundhouse as the initial location for development. A functional prototype has not yet been implemented.
 
 -Demo video timestamps: N/A — no replacement demo video.
 
