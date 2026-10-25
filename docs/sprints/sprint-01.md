@@ -9,12 +9,11 @@
 
 ## 1. Working Software Evidence
 
-A URL, tagged release, or demo video link, plus a link to the CI run. If nothing works yet, say so plainly and say why.
-If a video replaced the live demo (a missed check-in, or a TA who could not meet), link it here: media.oregonstate.edu, unlisted, captions on, one timestamp per student.
+-Deployed URL / release tag / demo video: No working application is available yet. This sprint focused on gathering requirements, researching visualization approaches, and understanding the existing Ear to Earth platform and available sensor data. The team also identified Roundhouse as the initial location for development. A functional prototype has not yet been implemented.
 
-- Deployed URL / release tag / demo video:
-- Demo video timestamps (one per student), only if a video replaced the live demo:
-- CI run:
+-Demo video timestamps: N/A — no replacement demo video.
+
+-CI run: N/A — no application build or CI run to report yet.
 
 ## 2. What Got Done
 
