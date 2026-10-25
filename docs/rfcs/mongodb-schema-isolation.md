@@ -10,13 +10,13 @@
 
 ## Problem and context
 
-Farm2Table must decide how much of its code depends on the shape of the sensor documents stored in MongoDB, a database our team reads from but does not control. The team already knows to build a standalone site, separate from Ear2Earth, that pulls sensor data from MongoDB. That makes the document format the main contract between our site and the lab's data, and right now nothing protects it.
+Farm2Table must decide how much of its code depends on the shape of the sensor documents stored in MongoDB, a database our team reads from but does not control. The team has already decided to build a standalone site, separate from Ear2Earth, that pulls sensor data from MongoDB. That makes the document format the main contract between our site and the lab's data, and right now nothing protects it.
 
 Each document carries field names, nesting, timestamp formats, and units chosen by the data owner. The project description warns about messy, missing, and real-world data, and says stations carry different combinations of sensors. Every one of those differences has to be handled somewhere.
 
 **Why now.** No feature has been written against the documents yet. Choosing a boundary now costs a few days. After 30 weeks and two teams of features reading raw documents, the same change means editing every query and component and re-testing all of them.
 
-**What happens if we do nothing.** The map, time-series plots, comparison views, and CSV export each read raw fields directly. If the data owner renames a field, adds a sensor model, or changes the timestamp format, many features break at once. Worse, they may fail silently: an empty chart looks like a quiet day, not a bug. [Add evidence: has the format changed before? Check the repo history or ask the data owner.]
+**What happens if we do nothing.** The map, time-series plots, comparison views, and CSV export each read raw fields directly. If the data owner renames a field, adds a sensor model, or changes the timestamp format, many features break at once. Worse, they may fail silently: an empty chart looks like a quiet day, not a bug.
 
 ## Options
 
@@ -50,7 +50,7 @@ Option B gives the most protection for the cost: a format change breaks one modu
 
 **Correctness.** Units and time zones are converted in exactly one place. That keeps the map, charts, and CSV export consistent with each other, which the project description lists as a requirement.
 
-**Performance.** Mapping and validating one document is cheap compared with the database query that fetched it. [Measure on a 30-day query for one station once the layer exists.]
+**Performance.** Mapping and validating one document is cheap compared with the database query that fetched it. 
 
 **Why not C alone.** A promise is useful, but it doesn't catch mistakes, and we can't verify it. It works best as an addition to B: we can share our schema and its tests with the data owner, the next step Fowler describes toward consumer-driven contracts ([Consumer-Driven Contracts](https://www.martinfowler.com/articles/consumerDrivenContracts.html)).
 
@@ -99,7 +99,7 @@ Our reading model, to be confirmed by the team: station ID, sensor type, variabl
 
 ## Delegation and validation
 
-**What I handed to AI.** I used Claude to brainstorm RFC topics fitting my Development Owner role, drafted this RFC's structure and possible option sets, and reviewed sources on anti-corruption layers and tolerant readers. 
+**What I handed to AI.** I used Claude to brainstorm RFC topics fitting my Deployment Owner role, drafted this RFC's structure and possible option sets, and reviewed sources on anti-corruption layers and tolerant readers. 
 
 **Where I stopped and validated myself.**
 
