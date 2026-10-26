@@ -6,8 +6,8 @@
 | Date | 2026-10-25 |
 | Status | Proposed |
 | Decision Date | (fill when decided) |
-| Deciders | (who agreed to the outcome) |
-| Superseded By | (link, if applicable) |
+| Deciders | Whole Team, Team Partner |
+| Superseded By | n/a |
 
 ## Problem and Context
  
@@ -45,11 +45,21 @@ Cost: season-long plots and multi-station comparisons may be slow, and we would 
 
 ## Analysis
 
-The technical tradeoffs that matter for this decision: performance, complexity, maintainability, security, cost. Argue from evidence (benchmarks, prototypes, documentation, prior art) and cite what you relied on so a reviewer can check it. Acknowledge what you are uncertain about.
+| Option | Code reuse | New hosting | Reversibility |
+| --- | --- | --- | --- |
+| A. Mongo time series | High | None | High |
+| B. TimescaleDB | Low | Yes | Low |
+| C. Do nothing | Full | None | n/a |
+
+**Performance.** One document per reading means a season-long plot scans many small documents. MongoDB's documentation says time series collections group readings into buckets to save space and speed up range queries, and TimescaleDB's documentation makes a similar claim for its tables. ([MongoDB docs: About Time Series Data](https://www.mongodb.com/docs/manual/core/timeseries/timeseries-bucketing/))
+
+**Complexity and maintainability.** Option A changes how data is stored but keeps the same database. Options B adds a second technology while we are also building the map, plots, and onboarding. 
+
+**Security and cost.** A and C need no new servers. B need hosting, backups, and a second set of credentials. Missing readings, mixed units, and time zones need handling in our API under every option, so the database choice affects speed more than correctness.
 
 ## Recommendation and Verification Plan
 
-Stay with **Option C (do nothing)** if it meets the targets below. If it misses, move to **Option A**. Choose B or D only if A also fails. This keeps the partner's database and the lowest risk. In every case, the API reads data through one function, `getSeries(station, variable, from, to)`, so a later move does not touch the plotting code.
+Stay with **Option C (do nothing)** if it meets the targets below. If it misses, move to **Option A**. Choose B only if A also fails. This keeps the partner's database and the lowest risk. In every case, the API reads data through one function, `getSeries(station, variable, from, to)`, so a later move does not touch the plotting code.
  
 How the team will know it worked, checked before the plotting features are finished:
  
@@ -64,7 +74,6 @@ Rollback: keep the old collection read-only for two weeks after any switch.
 - **Licensing:** confirm Ear2Earth's license and the license terms of any database we self-host. [Verify against current license text.]
 - **Data use and partner confidentiality:** the sensor data belongs to the partner. Use only data approved for a graded document, and never commit raw data or credentials.
 -  **IP:** our contributions follow the course and partner agreement.
-
 
 ## Delegation and Validation
 
