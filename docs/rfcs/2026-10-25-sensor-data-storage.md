@@ -51,7 +51,7 @@ Cost: season-long plots and multi-station comparisons may be slow, and we would 
 | B. TimescaleDB | Low | Yes | Low |
 | C. Do nothing | Full | None | n/a |
 
-**Performance.** One document per reading means a season-long plot scans many small documents. MongoDB's documentation says time series collections group readings into buckets to save space and speed up range queries, and TimescaleDB's documentation makes a similar claim for its tables. ([MongoDB docs: About Time Series Data](https://www.mongodb.com/docs/manual/core/timeseries/timeseries-bucketing/))
+**Performance.** Option A: MongoDB says time series collections group readings together, which improves query speed and saves disk space. This works best when each sensor has a fixed label (the `metaField`), so we would use station and sensor ID ([MongoDB docs: About Time Series Data](https://www.mongodb.com/docs/manual/core/timeseries/timeseries-bucketing/)). Option B: TimescaleDB splits data into time chunks and skips the ones a query does not need ([Tiger Data docs: Understand hypertables](https://www.tigerdata.com/docs/use-timescale/latest/hypertables)). Option C: each reading is its own small document, so a season-long plot has to read tens of thousands of them. 
 
 **Complexity and maintainability.** Option A changes how data is stored but keeps the same database. Options B adds a second technology while we are also building the map, plots, and onboarding. 
 
