@@ -49,19 +49,28 @@ The technical tradeoffs that matter for this decision: performance, complexity, 
 
 ## Recommendation and Verification Plan
 
-Which option you propose and why it wins the analysis above. Then, concretely: how will the team know it worked? List the tests, metrics, or acceptance criteria that would detect failure, and when they will be checked.
+Stay with **Option C (do nothing)** if it meets the targets below. If it misses, move to **Option A**. Choose B or D only if A also fails. This keeps the partner's database and the lowest risk. In every case, the API reads data through one function, `getSeries(station, variable, from, to)`, so a later move does not touch the plotting code.
+ 
+How the team will know it worked, checked before the plotting features are finished:
+ 
+- [ ] A 30-day, 3-station, 2-variable query returns in under 1 second at the 95th percentile.
+- [ ] A season plot sends the browser at most 1000 points per series.
+- [ ] A CSV export matches the plotted values, including gaps and time zones.
+- [ ] Any migration is rehearsed on a copy, with row counts compared before and after.
+      
+Rollback: keep the old collection read-only for two weeks after any switch.
 
 ## Constraints
+- **Licensing:** confirm Ear2Earth's license and the license terms of any database we self-host. [Verify against current license text.]
+- **Data use and partner confidentiality:** the sensor data belongs to the partner. Use only data approved for a graded document, and never commit raw data or credentials.
+-  **IP:** our contributions follow the course and partner agreement.
 
-Licensing, data use, IP, and the partner confidentiality boundary as they bear on this decision. If none apply, say so explicitly and briefly explain why.
 
 ## Delegation and Validation
 
-- **What you handed to AI tools** on this decision, whether that was the analysis, the prototype, the tests, or the writing.
-- **What checks made that reasonable**: tests, CI, review gates, a staging environment, a rollback path. Name the ones that actually exist in your repo, not the ones you intend to build.
-- **Where you stopped and validated the result yourself, and why those points.** If this decision is hard to reverse, say what you personally checked before committing to it.
-
-What is assessed is in the [AI policy](https://capstone.alexulbrich.com/assignments/introduction/#ai-policy-applies-to-every-assignment).
+- **What you handed to AI tools** I used AI to draft and summarize the MongoDB and TimescaleDB documentation.
+- **What checks made that reasonable**: 
+- **Where you stopped and validated the result yourself, and why those points.** 
 
 ## Decision
 
