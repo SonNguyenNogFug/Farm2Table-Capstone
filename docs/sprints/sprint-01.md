@@ -42,7 +42,7 @@ One line per student, three parts:
 If a student has nothing this sprint, their line says so plainly. Mechanical changes (formatter runs, lockfile bumps,
 generated files, bulk renames) are normal work but are not evidence; leave them out.
 
-**[Aron Meraz: ]** Researched [N-Sight: Precision Nitrogen Management](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?params=/context/biosysengdiss/article/1177/&path_info=IN_SEASON_NITROGEN_MANAGEMENT_LEVERAGING_DATA_VISUALIZATION_FOR_PRECISION_AGRICULTURE.pdf) and created RFC [Isolating Farm2Table from the MongoDB Document Format](docs/rfcs/mongodb-schema-isolation.md)
+**[Aron Meraz: ]** Researched [N-Sight: Precision Nitrogen Management](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?params=/context/biosysengdiss/article/1177/&path_info=IN_SEASON_NITROGEN_MANAGEMENT_LEVERAGING_DATA_VISUALIZATION_FOR_PRECISION_AGRICULTURE.pdf) and created RFC [Isolating Farm2Table from the MongoDB Document Format]([docs/rfcs/mongodb-schema-isolation.md](https://github.com/SonNguyenNogFug/Farm2Table-Capstone/blob/main/docs/rfcs/2026-10-25mongodb-schema-isolation.md))
 
 
 **[Student 2]**
