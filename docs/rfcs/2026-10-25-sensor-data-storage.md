@@ -83,4 +83,10 @@ Rollback: keep the old collection read-only for two weeks after any switch.
 
 ## Decision
 
-Proposed, until your team decides. Then accepted, rejected, or superseded, with the date and who chaired the decision. If superseded, link the RFC that replaces this one.
+**Status: Proposed.** The team has not decided yet. 
+ 
+When the team decides, we will:
+ 
+- [ ] Change Status in the table at the top to Accepted, Rejected, or Superseded.
+- [ ] Fill in the Decision Date, the Deciders, and who chaired the decision.
+- [ ] If a later RFC replaces this one, link it in Superseded By.
