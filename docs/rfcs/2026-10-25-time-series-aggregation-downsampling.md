@@ -127,7 +127,7 @@ The solution must remain compatible with the existing MongoDB API and available 
 
 ## Delegation and Validation
 
-ChatGPT assisted with organizing the RFC, comparing aggregation strategies, and drafting the analysis and verification plan.
+ChatGPT assisted with organizing the RFC, comparing aggregation strategies.
 
 The team has not implemented or benchmarked these approaches, so the recommendation remains provisional.
 
