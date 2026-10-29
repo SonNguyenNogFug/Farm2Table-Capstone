@@ -5,7 +5,7 @@
      Two things must be human-written: section 5, and the "shipped" sentence
      in each contribution line. Those are the parts anyone reads. -->
 
-**Team: Farm2Table** | **Sprint dates:** | **Date submitted:**
+**Team: Farm2Table** | **Sprint dates:** 09 October 2026 - 23 October 2026 | **Date submitted:**  25 October 2026
 
 ## 1. Working Software Evidence
 
