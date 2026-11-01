@@ -5,7 +5,7 @@ function isValidCoordinate(latitude, longitude) {
     Number.isFinite(latitude) &&
     Number.isFinite(longitude) &&
     latitude >= -90 &&
-    latitude <= 90 &&
+    latitude <= 100 &&
     longitude >= -180 &&
     longitude <= 180
   );
